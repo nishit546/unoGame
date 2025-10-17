@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UNO Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="login-screen">
+        <h1>UNO Game</h1>
+        <input type="text" id="name-input" placeholder="Enter your name">
+        <button id="join-btn">Join Game</button>
+    </div>
+
+    <div id="game-screen" class="hidden">
+        <div id="opponents-area">
+            </div>
+
+        <div id="table-area">
+            <div class="card-pile" id="draw-pile">
+                <span>UNO</span>
+            </div>
+            <div class="card-pile" id="discard-pile">
+                </div>
+        </div>
+        
+        <div id="game-info">
+            <button id="start-game-btn" class="hidden">Start Game</button>
+            <p id="turn-indicator">Waiting for players to join the lobby...</p>
+        </div>
+
+        <div id="player-area">
+            <div class="player-title">
+                <h2 id="player-name-display">Your Hand</h2>
+                <button id="uno-btn" disabled>UNO!</button>
+            </div>
+            <div id="player-hand">
+                </div>
+        </div>
+
+        <div id="winner-overlay" class="hidden">
+            <div id="winner-box">
+                <h1 id="winner-name"></h1>
+                <p>is the winner!</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="client.js"></script>
+</body>
+</html>

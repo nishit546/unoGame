@@ -1,0 +1,175 @@
+/* public/style.css */
+body {
+    font-family: sans-serif;
+    background-color: #333;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+}
+
+.hidden { display: none !important; }
+
+/* Login Screen */
+#login-screen {
+    text-align: center;
+}
+#login-screen input {
+    padding: 10px;
+    font-size: 16px;
+    margin-right: 10px;
+}
+#login-screen button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Game Screen */
+#game-screen {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+#opponents-area {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+.opponent {
+    margin: 0 20px;
+    text-align: center;
+}
+
+#table-area {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+#game-info {
+    text-align: center;
+    padding: 10px;
+    font-size: 1.2em;
+}
+#player-area {
+    text-align: center;
+}
+#player-hand {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 20px;
+    min-height: 150px;
+}
+
+/* Card Styling */
+.card {
+    width: 80px;
+    height: 120px;
+    border-radius: 8px;
+    border: 2px solid white;
+    margin: 0 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+.card:hover {
+    transform: translateY(-15px);
+}
+.red { background-color: #ff5555; }
+.yellow { background-color: #ffaa00; }
+.green { background-color: #55aa55; }
+.blue { background-color: #5555ff; }
+.wild { background: linear-gradient(to bottom right, #ff5555, #ffaa00, #55aa55, #5555ff); }
+
+.card-pile {
+    width: 85px;
+    height: 125px;
+    border: 3px dashed #777;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+}
+#draw-pile { cursor: pointer; }
+#discard-pile { border-style: solid; border-color: white; }
+#discard-pile .card { cursor: default; }
+#discard-pile .card:hover { transform: none; }
+
+/* Winner Overlay */
+#winner-overlay {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#winner-box {
+    text-align: center;
+    padding: 50px;
+    background: #444;
+    border-radius: 10px;
+}
+/* public/style.css */
+/* ... (all previous styles are the same) ... */
+
+/* NEW: Styles for the player title area */
+.player-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+#uno-btn {
+    padding: 10px 20px;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: white;
+    background-color: #e63946;
+    border: 2px solid white;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+#uno-btn:hover:not(:disabled) {
+    background-color: #f72536;
+}
+
+#uno-btn:disabled {
+    background-color: #555;
+    color: #999;
+    cursor: not-allowed;
+    border-color: #777;
+}
+/* public/style.css */
+/* ... (all previous styles are the same) ... */
+
+#start-game-btn {
+    padding: 10px 25px;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: #4CAF50; /* Green */
+    color: white;
+    border: 2px solid white;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+/* ... (all other styles are the same) ... */
